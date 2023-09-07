@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $ff-primary;
+  font-size: fs(400);
+  font-weight: $fw-400;
+  color: clr(neutral, 100);
+  background-color: clr(neutral, 800);
+}
+
+.section {
+  padding-block: $padding-section;
+}

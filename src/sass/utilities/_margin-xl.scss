@@ -1,0 +1,5 @@
+@use '../abstracts/' as *;
+
+.margin-xl {
+  margin-block: size(48);
+}

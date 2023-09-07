@@ -1,0 +1,48 @@
+@use '../abstracts/' as *;
+
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  letter-spacing: 0.125rem;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  border-radius: size(4);
+
+  isolation: isolate;
+  @include pseudo {
+    inset: 0;
+
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &[data-button='primary'] {
+    background-color: clr(neutral, 900);
+    color: clr(neutral, 100);
+
+    &::before {
+      background-color: clr(primary, 400);
+    }
+  }
+  &[data-button='secondary'] {
+    background-color: clr(primary, 400);
+    color: clr(neutral, 100);
+
+    &::before {
+      background-color: clr(secondary, 400);
+    }
+
+    &:hover,
+    &:focus {
+      color: clr(neutral, 900);
+    }
+  }
+}

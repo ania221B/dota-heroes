@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+.title {
+  font-weight: $fw-700;
+  font-variant: small-caps;
+  text-align: center;
+}
